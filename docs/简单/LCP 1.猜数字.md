@@ -35,13 +35,17 @@ answer 的元素取值为 {1, 2, 3} 之一。
 
 ## 解法
 
-```
+```javascript
 /**
  * @param {number[]} guess
  * @param {number[]} answer
  * @return {number}
  */
 var game = function(guess, answer) {
-    return (guess[0] === answer[0]) + (guess[1] === answer[1]) + (guess[2] === answer[2]);
+  return (
+    (guess[0] === answer[0]) +
+    (guess[1] === answer[1]) +
+    (guess[2] === answer[2])
+  );
 };
 ```
