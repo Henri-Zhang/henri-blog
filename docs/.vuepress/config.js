@@ -10,7 +10,7 @@ module.exports = {
       {
         title: '简单',
         collapsable: true,
-        children: []
+        children: ['/简单/LCP 1.猜数字']
       },
       {
         title: '中等',
