@@ -2,7 +2,7 @@ module.exports = {
   title: 'LeetCode算法题解',
   head: [['link', { rel: 'shortcut icon', type: 'image/x-icon', href: `/favicon.ico` }]],
   description: 'Just playing around',
-  base: '',
+  base: '/blog/',
   themeConfig: {
     nav: [{ text: 'GitHub', link: 'https://github.com/Henri-Zhang' }],
     sidebar: [
