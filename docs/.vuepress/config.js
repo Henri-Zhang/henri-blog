@@ -10,7 +10,12 @@ module.exports = {
       {
         title: '简单',
         collapsable: true,
-        children: ['/简单/LCP 1.猜数字', '/简单/1108. IP 地址无效化', '/简单/1221. 分割平衡字符串'],
+        children: [
+          '/简单/LCP 1.猜数字',
+          '/简单/1108. IP 地址无效化',
+          '/简单/1221. 分割平衡字符串',
+          '/简单/237. 删除链表中的节点'
+        ],
       },
       {
         title: '中等',
@@ -23,5 +28,5 @@ module.exports = {
         children: [],
       },
     ],
-  },
+  }
 };
