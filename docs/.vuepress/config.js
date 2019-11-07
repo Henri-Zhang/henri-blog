@@ -4,7 +4,7 @@ module.exports = {
   description: 'Just playing around',
   base: '/blog/',
   themeConfig: {
-    nav: [{ text: 'GitHub', link: 'https://github.com/Henri-Zhang' }],
+    nav: [{ text: 'Home', link: '/' }, { text: 'GitHub', link: 'https://github.com/Henri-Zhang' }],
     sidebar: [
       '/',
       {
@@ -21,7 +21,7 @@ module.exports = {
       {
         title: '中等',
         collapsable: true,
-        children: ['/中等/535.TinyURL 的加密与解密'],
+        children: ['/中等/535.TinyURL 的加密与解密', '/中等/109. 有序链表转换二叉搜索树'],
       },
       {
         title: '困难',
