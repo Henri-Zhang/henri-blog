@@ -11,6 +11,8 @@ module.exports = {
     'no-unused-vars': 'warn',
     'no-plusplus': 'off',
     'no-bitwise': 'off',
+
+    'vue/no-unused-components': 'warn',
   },
   parserOptions: {
     parser: 'babel-eslint',

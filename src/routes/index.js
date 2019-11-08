@@ -1,14 +1,16 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import A from '../components/A.vue';
-import B from '../components/B.vue';
-import C404 from '../components/404.vue';
+import Home from '@/pages/Home';
+import BeenPlaces from '@/pages/BeenPlaces';
+import RunningStory from '@/pages/RunningStory';
+import C404 from '@/pages/404';
 
 Vue.use(Router);
 
 export default [
-  { path: '/a', component: A },
-  { path: '/b', component: B },
+  { path: '/', component: Home },
+  { path: '/been-places', component: BeenPlaces },
+  { path: '/running-story', component: RunningStory },
   {
     path: '*',
     component: C404,
