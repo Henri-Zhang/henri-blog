@@ -99,7 +99,7 @@ export default {
 @import '~@/styles/common';
 
 footer {
-  background-color: #ffffff;
+  background-color: @theme-green;
   padding: 30px 0;
 
   .title {
@@ -118,7 +118,7 @@ footer {
 
   .brief-introduction {
     font-family: 'Avenir LT 65 Medium';
-    color: @theme-green;
+    color: white;
     margin-left: 10px;
   }
 
