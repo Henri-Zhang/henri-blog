@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     toBlog() {
-      this.$router.push('/blog');
+      window.location.href = '/blog';
     },
   },
 };

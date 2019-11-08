@@ -4,7 +4,10 @@ module.exports = {
   description: 'Just playing around',
   base: '/blog/',
   themeConfig: {
-    nav: [{ text: 'Home', link: '/' }, { text: 'GitHub', link: 'https://github.com/Henri-Zhang' }],
+    nav: [
+      { text: 'Home', link: 'https://henri.ren' },
+      { text: 'GitHub', link: 'https://github.com/Henri-Zhang' },
+    ],
     sidebar: [
       '/',
       {
