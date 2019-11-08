@@ -11,6 +11,8 @@ module.exports = {
     'no-unused-vars': 'warn',
     'no-plusplus': 'off',
     'no-bitwise': 'off',
+    'import/no-unresolved': 'off',
+    'import/extensions': 'off',
 
     'vue/no-unused-components': 'warn',
   },

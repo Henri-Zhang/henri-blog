@@ -27,6 +27,10 @@ module.exports = {
         use: ['vue-style-loader', 'css-loader'],
       },
       {
+        test: /\.less$/,
+        use: ['vue-style-loader', 'css-loader', 'less-loader'],
+      },
+      {
         test: /\.(jpe?g|png|svg|ttf|pdf|mov)$/,
         use: ['file-loader'],
       },
