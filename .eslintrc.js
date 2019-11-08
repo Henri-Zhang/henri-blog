@@ -10,6 +10,7 @@ module.exports = {
     'arrow-parens': 'off',
     'no-unused-vars': 'warn',
     'no-plusplus': 'off',
+    'no-bitwise': 'off',
   },
   parserOptions: {
     parser: 'babel-eslint',
