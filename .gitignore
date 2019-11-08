@@ -24,3 +24,5 @@ yarn.lcok
 *.njsproj
 *.sln
 *.sw?
+
+code.js

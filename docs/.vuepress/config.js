@@ -27,7 +27,9 @@ module.exports = {
       {
         title: '困难',
         collapsable: true,
-        children: [],
+        children: [
+          '/困难/51. N皇后'
+        ],
       },
     ],
   },
