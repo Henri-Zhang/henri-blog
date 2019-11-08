@@ -78,7 +78,6 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
 import moment from 'moment';
 import numeral from 'numeral';
 
@@ -97,5 +96,107 @@ export default {
 </script>
 
 <style lang="less" scoped>
-</style>
+@import '~@/styles/common';
 
+footer {
+  background-color: #ffffff;
+  padding: 30px 0;
+
+  .title {
+    font-family: 'Avenir LT 65 Medium';
+    font-size: 2rem;
+    color: white;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .portrait {
+    max-height: 6rem;
+    max-width: 6rem;
+  }
+
+  .brief-introduction {
+    font-family: 'Avenir LT 65 Medium';
+    color: @theme-green;
+    margin-left: 10px;
+  }
+
+  .personal-links {
+    list-style: none;
+    float: left;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+    li {
+      position: relative;
+      margin: auto;
+      height: 50px;
+      width: 50px;
+      text-align: center;
+
+      .popover {
+        display: none;
+        top: -225px;
+        left: -75px;
+        border: @color-links solid 2px;
+        border-radius: 10px;
+
+        .arrow {
+          left: 80px;
+          width: 1.6rem;
+          height: 0.8rem;
+          bottom: -0.8rem;
+
+          &:before {
+            bottom: -1px;
+            border-top-color: @color-links;
+            border-width: 0.8rem 0.8rem 0;
+          }
+
+          &:after {
+            bottom: 1px;
+            border-top-color: white;
+            border-width: 0.8rem 0.8rem 0;
+          }
+        }
+
+        img {
+          max-width: 200px;
+          border-radius: 10px;
+        }
+      }
+
+      .icon {
+        width: 40px;
+        transition: all 0.1s ease-in;
+      }
+
+      a:hover {
+        .icon {
+          transform: scale(1.2);
+        }
+
+        .popover {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    color: rgba(66, 66, 66, 0.8);
+    border-top: rgba(255, 255, 255, 0.5) solid 1px;
+    padding-top: 10px;
+    margin-top: 20px;
+
+    span:hover {
+      color: black;
+    }
+  }
+}
+</style>
