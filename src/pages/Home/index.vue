@@ -1,6 +1,7 @@
 <template>
   <div>
     <my-header></my-header>
+    <greet/>
     <div style="min-height: 1000px; background: #00bcd4;"></div>
     <my-footer></my-footer>
     <top-button></top-button>
@@ -10,6 +11,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import Header from '@/layouts/Header';
+import Greet from './Greet';
 import Footer from '@/layouts/Footer';
 import TopButton from '@/components/TopButton';
 
@@ -20,6 +22,7 @@ export default {
   },
   components: {
     MyHeader: Header,
+    Greet,
     MyFooter: Footer,
     TopButton,
   },
