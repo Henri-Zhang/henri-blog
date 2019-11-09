@@ -1,11 +1,11 @@
 <template>
   <div>
-    <my-header></my-header>
+    <my-header/>
     <greet/>
     <hobbies/>
-    <div style="min-height: 1000px; background: #00bcd4;"></div>
-    <my-footer></my-footer>
-    <top-button></top-button>
+    <learn-more/>
+    <my-footer/>
+    <top-button/>
   </div>
 </template>
 
@@ -14,6 +14,7 @@ import Vue from 'vue';
 import Header from '@/layouts/Header';
 import Greet from './Greet';
 import Hobbies from './Hobbies';
+import LearnMore from './LearnMore';
 import Footer from '@/layouts/Footer';
 import TopButton from '@/components/TopButton';
 
@@ -26,6 +27,7 @@ export default {
     MyHeader: Header,
     Greet,
     Hobbies,
+    LearnMore,
     MyFooter: Footer,
     TopButton,
   },

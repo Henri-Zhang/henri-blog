@@ -1,5 +1,5 @@
 <template>
-  <div class="background container">
+  <div class="container">
     <h1>Nice to meet you</h1>
     <h2>And my name is Henri</h2>
   </div>
@@ -11,14 +11,11 @@
 <style lang="less" scoped>
 @import '~@/styles/common';
 
-.background {
-  min-height: 800px;
-  .fixed-background('https://henri.oss-cn-hangzhou.aliyuncs.com/home_background_1.jpg');
-}
-
 .container {
   padding-top: 300px;
   padding-left: 10%;
+  min-height: 60vh;
+  .fixed-background('https://henri.oss-cn-hangzhou.aliyuncs.com/home_background_1.jpg');
 
   h1,
   h2 {
