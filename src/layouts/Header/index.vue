@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar fixed-top">
+  <nav class="navbar fixed-top" :class="{scrolled:scrolled}">
     <a class="brand" href="/" target="_blank">
       <img src="@/assets/logo.png" alt="henri.ren">
       <span>
@@ -14,10 +14,25 @@
 export default {
   name: 'Header',
   data() {
-    return {};
+    return {
+      scrolled: false,
+    };
   },
   methods: {
-    one() {},
+    onScroll() {
+      const distance = document.documentElement.scrollTop;
+      if (distance > 200) {
+        this.scrolled = true;
+      } else if (distance <= 200) {
+        this.scrolled = false;
+      }
+    },
+  },
+  created() {
+    window.addEventListener('scroll', this.onScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.onScroll);
   },
 };
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <my-header></my-header>
-    <div style="min-height: 1000px;"></div>
+    <div style="min-height: 1000px; background: #00bcd4;"></div>
     <my-footer></my-footer>
     <top-button></top-button>
   </div>
