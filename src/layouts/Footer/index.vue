@@ -8,7 +8,7 @@
       </div>
       <div class="row">
         <div class="col-lg-4 d-flex justify-content-center">
-          <img class="portrait" src="@/assets/images/avatar.jpg" alt="Henri">
+          <img class="portrait rounded-circle" src="@/assets/images/avatar.jpg" alt="Henri">
           <div class="brief-introduction">
             <p>Screen name: 漫长。</p>
             <p>Age: {{ currentAge }}</p>

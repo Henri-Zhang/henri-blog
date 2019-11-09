@@ -20,9 +20,6 @@ export default {
 </script>
 
 <style scoped>
-.rounded-circle {
-  border-radius: 50%;
-}
 .button {
   position: fixed;
   right: 2%;

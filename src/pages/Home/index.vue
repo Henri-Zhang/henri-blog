@@ -1,7 +1,6 @@
 <template>
   <div>
     <my-header></my-header>
-    <h1>Home</h1>
     <my-footer></my-footer>
     <top-button></top-button>
   </div>
@@ -28,4 +27,3 @@ export default {
   },
 };
 </script>
-

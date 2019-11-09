@@ -61,11 +61,4 @@ export default {
     padding: 0.5rem 5rem;
   }
 }
-
-.fixed-top {
-  position: fixed;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-}
 </style>

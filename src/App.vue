@@ -2,36 +2,6 @@
   <router-view></router-view>
 </template>
 
-<style>
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-@font-face {
-  font-family: 'Avenir LT 86 Heavy Oblique';
-  src: url('~@/assets/fonts/Avenir LT 86 Heavy Oblique.ttf');
-}
-
-@font-face {
-  font-family: 'Avenir LT 65 Medium';
-  src: url('~@/assets/fonts/Avenir LT 65 Medium.ttf');
-}
-
-@font-face {
-  font-family: 'Avenir LT 85 Heavy';
-  src: url('~@/assets/fonts/Avenir LT 85 Heavy.ttf');
-}
-
-@font-face {
-  font-family: 'Geomanist-Light';
-  src: url('~@/assets/fonts/Geomanist-Light.ttf');
-}
-
-@font-face {
-  font-family: 'Geomanist-ExtraLight';
-  src: url('~@/assets/fonts/Geomanist-ExtraLight.ttf');
-}
+<style  lang="less">
+@import '~@/styles/common';
 </style>
