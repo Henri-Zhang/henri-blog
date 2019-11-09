@@ -1,11 +1,13 @@
 <template>
   <button class="rounded-circle button" :class="animation" @click="backToTop">
-    <!-- <FontAwesome name="chevron-up" /> -->
+    <Icon name="up"/>
     <span>TOP</span>
   </button>
 </template>
 
 <script>
+import Icon from '@/components/Icon';
+
 export default {
   name: 'TopButton',
   data() {
@@ -34,6 +36,9 @@ export default {
       }, 20);
     },
   },
+  components: {
+    Icon,
+  },
   created() {
     window.addEventListener('scroll', this.onScroll);
   },
@@ -51,7 +56,6 @@ export default {
   display: block;
   width: 4rem;
   height: 4rem;
-  padding: 10px 0;
   opacity: 0;
   visibility: hidden;
   color: white;
