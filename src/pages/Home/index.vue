@@ -1,6 +1,7 @@
 <template>
   <div>
     <my-header></my-header>
+    <div style="min-height: 1000px;"></div>
     <my-footer></my-footer>
     <top-button></top-button>
   </div>
