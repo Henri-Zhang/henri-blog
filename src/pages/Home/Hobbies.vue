@@ -6,7 +6,12 @@
         <Icon name="left-arrow"/>
       </button>
       <ul class="items">
-        <li v-for="item in hobbies" :key="item.name" class="item">
+        <li
+          v-for="(item, index) in hobbies"
+          :key="item.name"
+          class="item"
+          @click="() => itemOnClick(index)"
+        >
           <img :src="item.img" :alt="item.name">
           <div class="name">{{item.name}}</div>
         </li>
@@ -34,10 +39,30 @@ export default {
   },
   methods: {
     previous() {
-      console.log('上一个');
+      const newHobbies = [...this.hobbies];
+      const firstChild = newHobbies.shift();
+      newHobbies.push(firstChild);
+      this.hobbies = newHobbies;
     },
     next() {
-      console.log('下一个');
+      const newHobbies = [...this.hobbies];
+      const lastChild = newHobbies.pop();
+      newHobbies.unshift(lastChild);
+      this.hobbies = newHobbies;
+    },
+    itemOnClick(index) {
+      const newHobbies = [...this.hobbies];
+      const middle = ~~(newHobbies.length / 2);
+      const diff = middle - index;
+      if (diff === 0) return;
+
+      if (diff > 0) {
+        const frag = newHobbies.splice(newHobbies.length - diff, diff);
+        this.hobbies = frag.concat(newHobbies);
+      } else {
+        const frag = newHobbies.splice(0, -diff);
+        this.hobbies = newHobbies.concat(frag);
+      }
     },
   },
 };
