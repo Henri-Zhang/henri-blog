@@ -11,7 +11,7 @@ module.exports = {
     path: path.resolve('dist'),
   },
   resolve: {
-    extensions: ['.js', '.less', '.json', '.vue'],
+    extensions: ['.ts', '.js', '.less', '.json', '.vue'],
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
