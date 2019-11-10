@@ -11,6 +11,8 @@
 </template>
 
 <script lang="ts">
+import _ from 'lodash';
+
 export default {
   name: 'Header',
   data() {
@@ -28,11 +30,16 @@ export default {
       }
     },
   },
+  computed: {
+    throttleOnScroll() {
+      return _.throttle(this.onScroll, 200);
+    },
+  },
   created() {
-    window.addEventListener('scroll', this.onScroll);
+    window.addEventListener('scroll', this.throttleOnScroll);
   },
   beforeDestroy() {
-    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('scroll', this.throttleOnScroll);
   },
 };
 </script>

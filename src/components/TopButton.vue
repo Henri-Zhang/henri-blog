@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import _ from 'lodash';
 import Icon from '@/components/Icon';
 
 export default {
@@ -36,14 +37,19 @@ export default {
       }, 20);
     },
   },
+  computed: {
+    throttleOnScroll() {
+      return _.throttle(this.onScroll, 200);
+    },
+  },
   components: {
     Icon,
   },
   created() {
-    window.addEventListener('scroll', this.onScroll);
+    window.addEventListener('scroll', this.throttleOnScroll);
   },
   beforeDestroy() {
-    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('scroll', this.throttleOnScroll);
   },
 };
 </script>
