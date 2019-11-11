@@ -147,13 +147,10 @@ export default {
 
       .item {
         position: absolute;
-        display: block;
-        margin: auto;
-        padding: 0;
-        box-shadow: 2px 1px 15px rgb(0, 0, 0);
+        box-shadow: 2px 1px 15px black;
         border-radius: 5px;
         cursor: pointer;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.2s ease-in-out;
 
         img {
           display: block;
@@ -183,7 +180,7 @@ export default {
         &:nth-of-type(2) {
           left: 0;
           z-index: 2;
-          box-shadow: 2px 1px 15px rgb(0, 0, 0);
+          box-shadow: 2px 1px 15px black;
         }
 
         &:nth-of-type(3) {
@@ -207,7 +204,7 @@ export default {
         &:nth-of-type(6) {
           left: 704px;
           z-index: 2;
-          box-shadow: 2px 1px 15px rgb(0, 0, 0);
+          box-shadow: 2px 1px 15px black;
         }
 
         &:nth-of-type(7) {
