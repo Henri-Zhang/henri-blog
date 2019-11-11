@@ -5,12 +5,12 @@
       <button class="slide-arrow prev" @click="previous">
         <Icon name="left-arrow"/>
       </button>
-      <ul class="items">
+      <ul class="items" ref="itemsUl">
         <li
           v-for="(item, index) in hobbies"
           :key="item.name"
           class="item"
-          @click="() => itemOnClick(index)"
+          @click="itemOnClick"
         >
           <img :src="item.img" :alt="item.name">
           <div class="name">{{item.name}}</div>
@@ -39,34 +39,33 @@ export default {
   },
   methods: {
     previous() {
-      const newHobbies = [...this.hobbies];
-      const firstChild = newHobbies.shift();
-      newHobbies.push(firstChild);
-      this.hobbies = newHobbies;
+      const fisrtChild = this.$refs.itemsUl.children[0];
+      this.$refs.itemsUl.appendChild(fisrtChild);
     },
     next() {
-      const newHobbies = [...this.hobbies];
-      const lastChild = newHobbies.pop();
-      newHobbies.unshift(lastChild);
-      this.hobbies = newHobbies;
+      const length = this.hobbies.length;
+      const fisrtChild = this.$refs.itemsUl.children[0];
+      const lastChild = this.$refs.itemsUl.children[length - 1];
+      this.$refs.itemsUl.insertBefore(lastChild, fisrtChild);
     },
-    itemOnClick(index) {
-      const newHobbies = [...this.hobbies];
-      const middle = ~~(newHobbies.length / 2);
-      const diff = middle - index;
-      if (diff === 0) return;
+    itemOnClick(e) {
+      let index;
+      this.$refs.itemsUl.childNodes.forEach((item, i) => {
+        if (e.target.parentNode === item) {
+          index = i;
+        }
+      });
+      const middle = ~~(this.hobbies.length / 2);
 
-      console.log(diff);
-
-      if (diff > 0) {
-        const frag = newHobbies.splice(newHobbies.length - diff, diff);
-        this.hobbies = frag.concat(newHobbies);
-      } else {
-        const frag = newHobbies.splice(0, -diff);
-        this.hobbies = newHobbies.concat(frag);
+      while (index !== middle) {
+        if (index > middle) {
+          this.previous();
+          index--;
+        } else {
+          this.next();
+          index++;
+        }
       }
-
-      console.log(this.hobbies.map(({ name }) => name));
     },
   },
 };
@@ -97,6 +96,7 @@ export default {
     border: none;
     cursor: pointer;
     text-align: center;
+    background-color: white;
     box-shadow: inset 0 0 0 2px @theme-green;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 
