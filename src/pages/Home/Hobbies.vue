@@ -56,6 +56,8 @@ export default {
       const diff = middle - index;
       if (diff === 0) return;
 
+      console.log(diff);
+
       if (diff > 0) {
         const frag = newHobbies.splice(newHobbies.length - diff, diff);
         this.hobbies = frag.concat(newHobbies);
@@ -68,13 +70,12 @@ export default {
 };
 </script>
 
-
 <style lang="less" scoped>
 @import '~@/styles/common';
 
 .container {
-  padding-top: 60px;
-  padding-bottom: 100px;
+  padding-top: 4rem;
+  padding-bottom: 7rem;
 
   .title {
     font-family: 'Avenir LT 65 Medium';
@@ -82,7 +83,7 @@ export default {
     color: black;
     line-height: 1.2;
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 4rem;
   }
 
   .slide-arrow {
@@ -130,38 +131,39 @@ export default {
 
   .carousel {
     display: flex;
-    // justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
 
     .items {
+      position: relative;
       display: flex;
       height: 300px;
-      position: relative;
+      width: 944px;
+      padding: 0;
+      margin: 0 3 * @space;
 
       .item {
         position: absolute;
         display: block;
-        width: 15rem;
         margin: auto;
         padding: 0;
         box-shadow: 2px 1px 15px rgb(0, 0, 0);
         border-radius: 5px;
         cursor: pointer;
-        transition: all 0.2s ease-in-out;
+        transition: all 0.5s ease-in-out;
 
         img {
           border-top-left-radius: 5px;
           border-top-right-radius: 5px;
-          min-height: 15rem;
-          max-width: 15rem;
         }
 
         .name {
           height: 60px;
           font-size: 1rem;
           text-transform: uppercase;
-          line-height: 1.2;
+          line-height: 60px;
           text-align: center;
-          padding: 22px 0;
           border-bottom-left-radius: 5px;
           border-bottom-right-radius: 5px;
           font-family: Avenir-Black, sans-serif;
@@ -183,30 +185,30 @@ export default {
 
         &:nth-of-type(3) {
           transform: scale(1.1);
-          left: 10rem;
+          left: 160px;
           z-index: 3;
         }
 
         &:nth-of-type(4) {
           transform: scale(1.2);
-          left: 22rem;
+          left: 352px;
           z-index: 4;
         }
 
         &:nth-of-type(5) {
           transform: scale(1.1);
-          left: 34rem;
+          left: 544px;
           z-index: 3;
         }
 
         &:nth-of-type(6) {
-          left: 44rem;
+          left: 704px;
           z-index: 2;
           box-shadow: 2px 1px 15px rgb(0, 0, 0);
         }
 
         &:nth-of-type(7) {
-          left: 44rem;
+          left: 704px;
           z-index: 1;
           box-shadow: none;
         }

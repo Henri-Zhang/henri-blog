@@ -120,7 +120,6 @@ footer {
     }
 
     .personal-links {
-      list-style: none;
       padding-top: 6 * @space;
       margin: 0;
       width: 100%;
