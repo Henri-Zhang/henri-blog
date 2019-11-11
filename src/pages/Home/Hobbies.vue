@@ -65,6 +65,8 @@ export default {
         const frag = newHobbies.splice(0, -diff);
         this.hobbies = newHobbies.concat(frag);
       }
+
+      console.log(this.hobbies.map(({ name }) => name));
     },
   },
 };
@@ -154,6 +156,7 @@ export default {
         transition: all 0.5s ease-in-out;
 
         img {
+          display: block;
           border-top-left-radius: 5px;
           border-top-right-radius: 5px;
         }

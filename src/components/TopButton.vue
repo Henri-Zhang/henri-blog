@@ -26,15 +26,10 @@ export default {
       }
     },
     backToTop() {
-      const timer = setInterval(() => {
-        const currentScrollTop = document.documentElement.scrollTop;
-        const distance = Math.ceil(currentScrollTop / 10);
-        document.documentElement.scrollTop = currentScrollTop - distance;
-
-        if (document.documentElement.scrollTop <= 0) {
-          clearInterval(timer);
-        }
-      }, 20);
+      window.scroll({
+        top: 0,
+        behavior: 'smooth',
+      });
     },
   },
   computed: {

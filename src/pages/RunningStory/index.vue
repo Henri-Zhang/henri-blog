@@ -1,5 +1,5 @@
 <template>
-  <h1>RunningStory</h1>
+  <h1>Comming soon....</h1>
 </template>
 
 <script lang="ts">
