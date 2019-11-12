@@ -10,7 +10,7 @@
         <router-link to="/running-story">My running story</router-link>
       </li>
       <li>
-        <router-link to="/blog">My blog</router-link>
+        <router-link to="/blog/">My blog</router-link>
       </li>
     </ul>
   </div>
