@@ -38,7 +38,7 @@ module.exports = {
       {
         title: '困难',
         collapsable: true,
-        children: ['/困难/51. N皇后', '/困难/145. 二叉树的后序遍历'],
+        children: ['/困难/51. N皇后', '/困难/145. 二叉树的后序遍历', '/困难/980. 不同路径 III'],
       },
     ],
   },
