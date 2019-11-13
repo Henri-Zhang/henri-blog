@@ -14,6 +14,7 @@ module.exports = {
     'import/no-unresolved': 'off',
     'import/extensions': 'off',
     'import/prefer-default-export': 'off',
+    'func-names': 'off',
 
     'vue/no-unused-components': 'warn',
   },
