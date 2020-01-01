@@ -7,8 +7,8 @@
     "build": "webpack --mode production",
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:dev": "node genDocsConfig && vuepress dev docs",
+    "docs:build": "node genDocsConfig && vuepress build docs"
   },
   "dependencies": {
     "core-js": "^3.3.2",
