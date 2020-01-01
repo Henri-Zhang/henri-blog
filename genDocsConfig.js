@@ -9,7 +9,15 @@ const genCategory = (dir, files) => {
     collapsable: true,
   };
 
-  result.children = files.map(file => `/${dir}/${file.replace('.md', '')}`);
+  // file按题号排序，若有题号非数字放最后按字母顺序排
+  const sorter = (a, b) => {
+    const orderA = a.substr(0, a.indexOf('.'));
+    const orderB = b.substr(0, b.indexOf('.'));
+
+    return orderA - orderB || (orderA > orderB) - 0.5;
+  };
+
+  result.children = files.sort(sorter).map(file => `/${dir}/${file.replace('.md', '')}`);
 
   return result;
 };
