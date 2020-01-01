@@ -26,3 +26,5 @@ yarn.lock
 *.sw?
 
 code.js
+
+docs/.vuepress/config.js

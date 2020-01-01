@@ -23,4 +23,7 @@ const config = require('./docs/.vuepress/originConfig.js');
 
 config.themeConfig.sidebar.push(...sidebar);
 
-fs.writeFileSync('./docs/.vuepress/config.js', `module.exports=${JSON.stringify(config)};`);
+fs.writeFileSync(
+  './docs/.vuepress/config.js',
+  `module.exports = ${JSON.stringify(config, null, 2)};`,
+);
