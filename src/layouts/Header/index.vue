@@ -35,7 +35,7 @@ export default {
       return _.throttle(this.onScroll, 200);
     },
   },
-  created() {
+  mounted() {
     window.addEventListener('scroll', this.throttleOnScroll);
   },
   beforeDestroy() {

@@ -40,7 +40,7 @@ export default {
   components: {
     Icon,
   },
-  created() {
+  mounted() {
     window.addEventListener('scroll', this.throttleOnScroll);
   },
   beforeDestroy() {

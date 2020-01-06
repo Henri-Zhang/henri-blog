@@ -1,13 +1,7 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import routes from './routes';
-import App from './App.vue';
+import { createApp } from './app';
 
-Vue.config.productionTip = false;
+const { app, router } = createApp();
 
-const router = new Router({ mode: 'history', routes });
-
-new Vue({
-  router,
-  render: h => h(App),
-}).$mount('#henri');
+router.onReady(() => {
+  app.$mount('#henri', true);
+});
