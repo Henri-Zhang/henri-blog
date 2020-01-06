@@ -1,6 +1,6 @@
 <template>
   <button class="rounded-circle button" :class="animation" @click="backToTop">
-    <Icon name="up"/>
+    <Icon name="up" />
     <span>TOP</span>
   </button>
 </template>
@@ -41,6 +41,7 @@ export default {
     Icon,
   },
   mounted() {
+    console.log('我已经挂载了。。');
     window.addEventListener('scroll', this.throttleOnScroll);
   },
   beforeDestroy() {

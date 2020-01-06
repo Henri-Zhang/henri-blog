@@ -1,11 +1,11 @@
 <template>
   <div>
-    <my-header/>
-    <greet/>
-    <hobbies/>
-    <learn-more/>
-    <my-footer/>
-    <top-button/>
+    <my-header />
+    <greet />
+    <hobbies />
+    <learn-more />
+    <my-footer />
+    <top-button />
   </div>
 </template>
 

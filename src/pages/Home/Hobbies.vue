@@ -3,21 +3,16 @@
     <div class="title">My hobbies and interests</div>
     <div class="carousel">
       <button class="slide-arrow prev" @click="previous">
-        <Icon name="left-arrow"/>
+        <Icon name="left-arrow" />
       </button>
       <ul class="items" ref="itemsUl">
-        <li
-          v-for="(item, index) in hobbies"
-          :key="item.name"
-          class="item"
-          @click="itemOnClick"
-        >
-          <img :src="item.img" :alt="item.name">
-          <div class="name">{{item.name}}</div>
+        <li v-for="(item, index) in hobbies" :key="item.name" class="item" @click="itemOnClick">
+          <img :src="item.img" :alt="item.name" />
+          <div class="name">{{ item.name }}</div>
         </li>
       </ul>
       <button class="slide-arrow next" @click="next">
-        <Icon name="right-arrow"/>
+        <Icon name="right-arrow" />
       </button>
     </div>
   </div>
@@ -49,6 +44,7 @@ export default {
       this.$refs.itemsUl.insertBefore(lastChild, fisrtChild);
     },
     itemOnClick(e) {
+      console.log(e);
       let index;
       this.$refs.itemsUl.childNodes.forEach((item, i) => {
         if (e.target.parentNode === item) {
