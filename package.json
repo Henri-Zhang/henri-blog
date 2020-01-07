@@ -6,7 +6,7 @@
     "start": "webpack-dev-server --config build/webpack.client.js",
     "build:client": "webpack --config build/webpack.client.js --mode production",
     "build:server": "webpack --config build/webpack.server.js --mode production",
-    "build": "yarn build:client && yarn build:server",
+    "build": "rimraf dist && yarn build:client && yarn build:server",
     "serve": "node src/server",
     "docs:dev": "node genDocsConfig && vuepress dev docs",
     "docs:build": "node genDocsConfig && vuepress build docs"
@@ -38,6 +38,7 @@
     "file-loader": "^4.2.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
+    "rimraf": "^3.0.0",
     "vue-loader": "^15.7.2",
     "vue-template-compiler": "^2.6.10",
     "vuepress": "^1.2.0",

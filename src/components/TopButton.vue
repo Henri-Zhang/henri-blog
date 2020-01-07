@@ -41,7 +41,6 @@ export default {
     Icon,
   },
   mounted() {
-    console.log('我已经挂载了。。');
     window.addEventListener('scroll', this.throttleOnScroll);
   },
   beforeDestroy() {

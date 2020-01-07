@@ -44,7 +44,6 @@ export default {
       this.$refs.itemsUl.insertBefore(lastChild, fisrtChild);
     },
     itemOnClick(e) {
-      console.log(e);
       let index;
       this.$refs.itemsUl.childNodes.forEach((item, i) => {
         if (e.target.parentNode === item) {

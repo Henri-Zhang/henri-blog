@@ -1,7 +1,6 @@
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const VueSSRClientPlugin = require('vue-server-renderer/client-plugin');
 
 module.exports = {
   // entry: path.resolve(__dirname, '../src/entry-client.js'),
@@ -58,7 +57,6 @@ module.exports = {
       template: './src/index.ejs',
       favicon: './src/assets/favicon.ico',
     }),
-    new VueSSRClientPlugin(),
   ],
   devServer: {
     historyApiFallback: true,

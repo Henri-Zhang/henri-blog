@@ -1,5 +1,5 @@
 <template>
-  <router-view></router-view>
+  <router-view id="henri"></router-view>
 </template>
 
 <style  lang="less">
