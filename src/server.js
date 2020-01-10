@@ -10,7 +10,7 @@ const clientManifest = require('./../dist/vue-ssr-client-manifest.json');
 
 const renderer = VueSsrRender.createBundleRenderer(serverBundle, {
   runInNewContext: true,
-  template: fs.readFileSync(`${process.cwd()}/dist/index.html`, 'utf-8'),
+  template: fs.readFileSync(`${process.cwd()}/src/index.ejs`, 'utf-8'),
   clientManifest,
 });
 

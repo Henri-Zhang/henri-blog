@@ -1,11 +1,9 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const merge = require('webpack-merge');
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const merge = require('webpack-merge');
 const VueSSRClientPlugin = require('vue-server-renderer/client-plugin');
-// const base = require('./webpack.base');
+const base = require('./webpack.base');
 
-module.exports = {
+module.exports = merge(base, {
   entry: path.resolve(__dirname, '../src/entry-client.js'),
   output: {
     filename: 'static/bundle.[hash].js',
@@ -13,55 +11,7 @@ module.exports = {
     hashDigestLength: 8,
     path: path.resolve('dist'),
   },
-  resolve: {
-    extensions: ['.ts', '.js', '.less', '.json', '.vue'],
-    alias: {
-      '@': path.resolve(__dirname, '../src'),
-    },
-  },
-  module: {
-    rules: [
-      {
-        test: /\.vue$/,
-        use: ['vue-loader'],
-      },
-      {
-        test: /\.css$/,
-        use: ['vue-style-loader', 'css-loader'],
-      },
-      {
-        test: /\.less$/,
-        use: ['vue-style-loader', 'css-loader', 'less-loader'],
-      },
-      {
-        test: /\.(jpe?g|png|svg|ttf|pdf|mov)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              limit: 10000,
-              name: 'static/[name].[hash].[ext]',
-            },
-          },
-        ],
-      },
-    ],
-  },
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-      maxSize: 244 * 1024,
-      name: true,
-    },
-  },
-  plugins: [
-    new VueLoaderPlugin(),
-    new HtmlWebpackPlugin({
-      template: './src/index.ejs',
-      favicon: './src/assets/favicon.ico',
-    }),
-    new VueSSRClientPlugin(),
-  ],
+  plugins: [new VueSSRClientPlugin()],
   devServer: {
     historyApiFallback: true,
     host: '0.0.0.0',
@@ -76,4 +26,4 @@ module.exports = {
       errors: true,
     },
   },
-};
+});

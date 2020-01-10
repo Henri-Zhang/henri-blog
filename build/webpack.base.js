@@ -3,13 +3,6 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  // entry: path.resolve(__dirname, '../src/entry-client.js'),
-  output: {
-    filename: 'static/bundle.[hash].js',
-    chunkFilename: 'static/[id].chunk.[hash].js',
-    hashDigestLength: 8,
-    path: path.resolve('dist'),
-  },
   resolve: {
     extensions: ['.ts', '.js', '.less', '.json', '.vue'],
     alias: {
@@ -58,18 +51,4 @@ module.exports = {
       favicon: './src/assets/favicon.ico',
     }),
   ],
-  devServer: {
-    historyApiFallback: true,
-    host: '0.0.0.0',
-    useLocalIp: true,
-    open: true,
-    quiet: true,
-    progress: true,
-    compress: true,
-    port: 9000,
-    overlay: {
-      warnings: true,
-      errors: true,
-    },
-  },
 };
