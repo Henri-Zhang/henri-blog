@@ -10,8 +10,8 @@
         :link="item.link"
       />
     </div>
-    <my-footer/>
-    <top-button/>
+    <my-footer />
+    <top-button />
   </div>
 </template>
 
@@ -25,10 +25,12 @@ import TopButton from '@/components/TopButton';
 export default {
   name: 'BeenPlaces',
   data() {
-    return {};
+    return {
+      upsetPlaces: [],
+    };
   },
-  computed: {
-    upsetPlaces: () => _.shuffle(beenPlaces),
+  beforeMount() {
+    this.upsetPlaces = _.shuffle(beenPlaces);
   },
   components: {
     City,

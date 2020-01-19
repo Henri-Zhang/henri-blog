@@ -9,7 +9,7 @@ export default context => {
       const matchedComponents = router.getMatchedComponents();
 
       if (!matchedComponents.length) {
-        return reject({ code: 404 });
+        return reject(new Error(404));
       }
 
       resolve(app);

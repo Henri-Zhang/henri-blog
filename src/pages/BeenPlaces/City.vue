@@ -1,12 +1,14 @@
 <template>
-  <div class="city" :style="{'background-color':maskColor}">
+  <div class="city" :style="{ 'background-color': maskColor }">
     <figure class="image-background">
-      <img :src="imgSrc" :alt="name">
+      <img :src="imgSrc" :alt="name" />
     </figure>
     <div class="fill-up hover-in">
-      <h1 class="city-name">{{name}}</h1>
+      <h1 class="city-name">{{ name }}</h1>
     </div>
-    <a class="fill-up city-link" rel="noopener noreferrer" :href="link" target="_blank">{{name}}</a>
+    <a class="fill-up city-link" rel="noopener noreferrer" :href="link" target="_blank">{{
+      name
+    }}</a>
   </div>
 </template>
 
@@ -114,7 +116,7 @@ export default {
   }
 
   &::after {
-    transform: scale(2) rotate(-45deg) translateZ(0px);
+    transform: scale(2.1) rotate(-45deg) translateZ(0px);
     transition-duration: 1s;
   }
 }
