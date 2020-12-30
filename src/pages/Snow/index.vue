@@ -1,5 +1,8 @@
 <template>
-  <canvas ref="snow" />
+  <div>
+    <h1 class="title">Sylvia</h1>
+    <canvas ref="snow" />
+  </div>
 </template>
 
 <script>
@@ -134,10 +137,19 @@ body {
   height: 100%;
 }
 
+.title {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 canvas {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -1;
   background-image: linear-gradient(bottom, rgb(105, 173, 212) 0%, rgb(23, 82, 145) 84%);
   background-image: -o-linear-gradient(bottom, rgb(105, 173, 212) 0%, rgb(23, 82, 145) 84%);
   background-image: -moz-linear-gradient(bottom, rgb(105, 173, 212) 0%, rgb(23, 82, 145) 84%);
