@@ -12,6 +12,9 @@
       <li>
         <a href="/blog">My blog</a>
       </li>
+      <li>
+        <router-link to="/snow">Let's snow! Sylvia.</router-link>
+      </li>
     </ul>
   </div>
 </template>
