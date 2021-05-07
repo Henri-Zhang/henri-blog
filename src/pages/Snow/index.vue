@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="title">Sylvia</h1>
+    <h1 class="title">张大恒</h1>
     <canvas ref="snow" />
   </div>
 </template>

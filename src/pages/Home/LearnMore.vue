@@ -13,7 +13,7 @@
         <a href="/blog">My blog</a>
       </li>
       <li>
-        <router-link to="/snow">Let's snow! Sylvia.</router-link>
+        <router-link to="/snow">Let's snow!</router-link>
       </li>
     </ul>
   </div>
