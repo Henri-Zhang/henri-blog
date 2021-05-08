@@ -1,6 +1,9 @@
 <template>
   <div>
-    <h1 class="title">张大恒</h1>
+    <div class="title">
+      <h1>陈秀娟</h1>
+      <h2>麻麻母亲节快乐~</h2>
+    </div>
     <canvas ref="snow" />
   </div>
 </template>
@@ -131,7 +134,7 @@ export default {
 };
 </script>
 
-<style lang="css" scoped>
+<style lang="less" scoped>
 body {
   margin: 0;
   height: 100%;
@@ -143,6 +146,11 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  h1,
+  h2 {
+    text-align: center;
+  }
 }
 
 canvas {
