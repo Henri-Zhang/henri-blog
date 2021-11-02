@@ -3,7 +3,6 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
 import Raining from '@/components/Raining';
 
 export default {
