@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="title">
-      <h1>陈秀娟</h1>
-      <h2>麻麻母亲节快乐~</h2>
+      <h1>下雪啦</h1>
+      <h2>雪地里来了一群小画家</h2>
     </div>
     <canvas ref="snow" />
   </div>
