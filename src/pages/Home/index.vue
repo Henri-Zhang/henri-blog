@@ -10,7 +10,6 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
 import Header from '@/layouts/Header';
 import Greet from './Greet';
 import Hobbies from './Hobbies';

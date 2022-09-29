@@ -3,7 +3,7 @@
     <h4 class="title">Make firends with me</h4>
     <div class="content">
       <div class="brief-introduction">
-        <img class="portrait rounded-circle" src="@/assets/images/avatar.jpg" alt="Henri">
+        <img class="portrait rounded-circle" src="@/assets/images/avatar.jpg" alt="Henri" />
         <div class="info">
           <p>Screen name: 漫长。</p>
           <p>Age: {{ currentAge }}</p>
@@ -13,12 +13,12 @@
       <ul class="personal-links">
         <li>
           <a rel="noopener noreferrer" href="mailto:henrizhang@henri.ren">
-            <img class="icon" src="@/assets/icons/email.svg" alt="email">
+            <img class="icon" src="@/assets/icons/email.svg" alt="email" />
           </a>
         </li>
         <li>
           <a rel="noopener noreferrer" href="https://github.com/Henri-Zhang" target="_blank">
-            <img class="icon" src="@/assets/icons/github.svg" alt="github">
+            <img class="icon" src="@/assets/icons/github.svg" alt="github" />
           </a>
         </li>
         <li>
@@ -27,32 +27,34 @@
             href="https://www.zhihu.com/people/zhang-heng-78-10/activities"
             target="_blank"
           >
-            <img class="icon" src="@/assets/icons/zhihu.svg" alt="zhihu">
+            <img class="icon" src="@/assets/icons/zhihu.svg" alt="zhihu" />
           </a>
         </li>
         <li>
           <a rel="noopener noreferrer" target="_blank">
             <div class="popover">
-              <div class="arrow"/>
-              <img alt="Wechat QR code" src="@/assets/images/WechatQR.jpeg">
+              <div class="arrow" />
+              <img alt="Wechat QR code" src="@/assets/images/WechatQR.jpeg" />
             </div>
-            <img class="icon" src="@/assets/icons/wechat.svg" alt="wechat">
+            <img class="icon" src="@/assets/icons/wechat.svg" alt="wechat" />
           </a>
         </li>
         <li>
           <a rel="noopener noreferrer" href="https://user.qzone.qq.com/371595867" target="_blank">
-            <img class="icon" src="@/assets/icons/qzone.svg" alt="qzone">
+            <img class="icon" src="@/assets/icons/qzone.svg" alt="qzone" />
           </a>
         </li>
         <li>
           <a rel="noopener noreferrer" href="https://weibo.com/5214776283/profile" target="_blank">
-            <img class="icon" src="@/assets/icons/weibo.svg" alt="weibo">
+            <img class="icon" src="@/assets/icons/weibo.svg" alt="weibo" />
           </a>
         </li>
       </ul>
     </div>
     <div class="copyright">
-      <span>© {{currentYear}} henri.ren All Rights Reserved.</span>
+      <span>{{ currentYear }}</span>
+      <span>ICP证：</span>
+      <a href="https://beian.miit.gov.cn/" target="_blank">皖ICP备18015813号-1</a>
     </div>
   </footer>
 </template>
@@ -203,6 +205,10 @@ footer {
 
     span:hover {
       color: black;
+    }
+
+    a {
+      color: rgba(66, 66, 66, 0.8);
     }
   }
 }
